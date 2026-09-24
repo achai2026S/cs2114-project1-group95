@@ -193,6 +193,11 @@ public class Menu
                 {
                     selected.turnAround();
                 }
+                else if (innerChoice > 5)
+                {
+                    System.out.println("Please select a valid choice.");
+
+                }
             }
             choice = 0;
         }
