@@ -6,8 +6,6 @@ public class Menu
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-
-        // adding and linking all the stations
         Station stationA = new Station(null, null, "Station A");
         Station stationB = new Station(null, null, "Station B");
         Station stationC = new Station(null, null, "Station C");
@@ -22,16 +20,16 @@ public class Menu
 
         stationC.setLeft(stationB);
         stationC.setRight(stationD);
-
+        
         stationD.setLeft(stationC);
         stationD.setRight(stationE);
-
+        
         stationE.setLeft(stationD);
         stationE.setRight(stationF);
 
         stationF.setLeft(stationE);
         stationF.setRight(stationA);
-
+        
         stationA.setLeft(stationF);
 
         ArrayList<Train> trains = new ArrayList<>();
@@ -90,7 +88,7 @@ public class Menu
                     System.out.println("Enter passenger name:");
                     String name = scanner.nextLine().trim();
                     System.out.println(
-                        "Select destination (1. Station A, 2. Station B, 3. Station C, 4. Station D, 5. Station E, 6. Station F");
+                        "Select destination (1. Station A, 2. Station B, 3. Station C, 4. Station D");
                     String destChoice = scanner.nextLine().trim();
                     Station destStation = null;
 
@@ -110,21 +108,12 @@ public class Menu
                     {
                         destStation = stationD;
                     }
-                    else if (destChoice.equals("5"))
-                    {
-                        destStation = stationE;
-                    }
-                    else if (destChoice.equals("6"))
-                    {
-                        destStation = stationF;
-                    }
                     if (destStation != null)
                     {
                         try
                         {
                             Seat newSeat = new Seat(name, destStation);
-                            if (!selected.addPassenger(newSeat))
-                            {
+                            if(!selected.addPassenger(newSeat)) {
                                 System.out.println("Passenger was not added");
                             }
                         }
@@ -136,14 +125,10 @@ public class Menu
                 }
                 else if (innerChoice == 2)
                 {
-                    if (selected.goNext())
-                    {
-                        System.out.println(
-                            "Train arrived at "
-                                + selected.getCurrentStation().getName());
+                    if(selected.goNext()) {
+                        System.out.println("Train arrived at " + selected.getCurrentStation().getName());
                     }
-                    else
-                    {
+                    else {
                         System.out.println("Failed to reach station");
                     }
                 }
@@ -189,8 +174,7 @@ public class Menu
                         }
                     }
                 }
-                else if (innerChoice == 5)
-                {
+                else if (innerChoice == 5) {
                     selected.turnAround();
                 }
             }
