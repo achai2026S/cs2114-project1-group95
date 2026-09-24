@@ -39,10 +39,8 @@ public class Seat
         }
         this.name = newName;
     }
-
-
-    public void setDestination(Station newDest)
-    {
+    
+    public void setDestination(Station newDest) {
         this.destination = newDest;
     }
 }
