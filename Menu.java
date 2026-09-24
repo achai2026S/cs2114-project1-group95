@@ -88,7 +88,7 @@ public class Menu
                     System.out.println("Enter passenger name:");
                     String name = scanner.nextLine().trim();
                     System.out.println(
-                        "Select destination (1. Station A, 2. Station B, 3. Station C, 4. Station D");
+                        "Select destination (1. Station A, 2. Station B, 3. Station C, 4. Station D, 5. Station E, 6. Station F");
                     String destChoice = scanner.nextLine().trim();
                     Station destStation = null;
 
@@ -107,6 +107,12 @@ public class Menu
                     else if (destChoice.equals("4"))
                     {
                         destStation = stationD;
+                    }
+                    else if(destChoice.equals("5")) {
+                        destStation = stationE;
+                    }
+                    else if(destChoice.equals("6")) {
+                        destStation = stationF;
                     }
                     if (destStation != null)
                     {
@@ -177,7 +183,7 @@ public class Menu
                 else if (innerChoice == 5) {
                     selected.turnAround();
                 }
-                else if (innerChoice > 5)
+                else if (innerChoice > 6)
                 {
                     System.out.println("Please select a valid choice.");
 
