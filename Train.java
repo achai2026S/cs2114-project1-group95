@@ -30,6 +30,11 @@ public class Train
         this(maxCap, startStation);
         this.direction = goingLeft;
     }
+    
+    public void setDirection(boolean newDirec)
+    {
+        this.direction = newDirec;
+    }
 
 
     public boolean getDirection()
@@ -38,9 +43,9 @@ public class Train
     }
 
 
-    public void setDirection(boolean newDirec)
+    public void turnAround()
     {
-        this.direction = newDirec;
+        this.direction = !this.direction;
     }
 
 
