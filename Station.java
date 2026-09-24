@@ -92,12 +92,16 @@ public class Station
     {
         this.name = newName;
     }
-    
-    public void setLeft(Station left) {
+
+
+    public void setLeft(Station left)
+    {
         this.leftStation = left;
     }
-    
-    public void setRight(Station right) {
+
+
+    public void setRight(Station right)
+    {
         this.rightStation = right;
     }
 

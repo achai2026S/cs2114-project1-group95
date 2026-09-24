@@ -1,2 +1,4 @@
 # cs2114-project1-group95
-Training system, a system used to simulate a train and all it's pasengers inside.
+
+Ticket to Ride. This program is made to simulate a system that keeps track of trains going to station to station with passengers that get off at each. The first menu when running the program is a menu to choose what train you want to control, you can come back to this menu anytime. After choosing a train you are presented with options to add a passenger, move the train, see a specific seat, see all passengers, or turn the train around. Adding a passenger you input the name and destination from the given selection. The train moves on it's own depending on the direction and availability of the next station. See a specific seat allows you to check which passenger is in a specific seat. See all passengers give you a list of the passengers on the train and their destinations. Turning the train around changes the direction the train is moving in (left or right). 
+

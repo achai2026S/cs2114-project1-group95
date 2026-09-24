@@ -30,7 +30,8 @@ public class Train
         this(maxCap, startStation);
         this.direction = goingLeft;
     }
-    
+
+
     public void setDirection(boolean newDirec)
     {
         this.direction = newDirec;
@@ -77,10 +78,13 @@ public class Train
     {
         return passengerList;
     }
-    
-    public boolean goNext() {
+
+
+    public boolean goNext()
+    {
         Station next = currentStation.departingTrain();
-        if(next == null) {
+        if (next == null)
+        {
             return false;
         }
         next.incomingTrain(this);
